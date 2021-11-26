@@ -1,3 +1,5 @@
+// This is just an utterly useless C code to render a 2D triangle
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <SDL2/SDL.h>
@@ -13,7 +15,7 @@ float playPosX, playPosY;
 
 typedef struct triangle
 {
- void(*draw)(SDL_Renderer *render,float length);
+ void(*draw)(SDL_Renderer *render,float length);	// Declaring a function pointer inside of a struct because C is to stupid to handle a normal function inside a struct
 }Triangle;
 
 void drawTriangle(SDL_Renderer *render,float length)
